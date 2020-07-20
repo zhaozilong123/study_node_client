@@ -1,0 +1,31 @@
+{
+    "apps": [
+        {
+            "name": "guagua-node-service",
+            "script": "./bin/www",
+            "watch": ["Controller", "Middlewares", "Utils", "app.js", "Model", "Router"],
+            "watch_options": {
+                "usePolling": true
+            },
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": "3005"
+            },
+            "env_local": {
+                "NODE_ENV": "local",
+                "PORT": "3002"
+            },
+            "env_production": {
+                "NODE_ENV": "production",
+                "PORT": "3001"
+            },
+            "error_file": "./logs/web/err.log",
+            "out_file": "./logs/web/out.log",
+            "max_memory_restart": "3000M",
+            "instances": 1,
+            "exec_mode": "cluster",
+            "merge_logs": true,
+            "log_date_format": "\\[YYYY-MM-DD HH:mm:ss\\]"
+        }
+    ]
+}

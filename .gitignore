@@ -1,0 +1,10 @@
+
+.DS_Store
+.idea
+.vscode
+
+logs/
+
+.yarn-error.log
+
+node_modules/

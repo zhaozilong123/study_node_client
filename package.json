@@ -1,0 +1,29 @@
+{
+    "name": "guagua-node-service",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "npm run server:dev",
+        "server:dev": "pm2-dev ./process.json --env local",
+        "server:test": "pm2-runtime ./process.json",
+        "server:pro": "pm2 start ./process.json --env production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "await-to-js": "^2.1.1",
+        "axios": "^0.18.0",
+        "debug": "^4.1.1",
+        "koa": "^2.6.2",
+        "koa-bodyparser": "^4.2.1",
+        "koa-compose": "^4.1.0",
+        "koa-cookie-parser": "^1.0.0",
+        "koa-logger": "^3.2.0",
+        "koa-onerror": "^4.1.0",
+        "koa-router": "^7.4.0",
+        "koa-session": "^5.10.1",
+        "koa2-cors": "^2.0.6",
+        "mongoose": "^5.4.3",
+        "mongoose-sequence": "^4.0.1",
+        "pm2": "^3.2.4"
+    }
+}
